@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CodingTaskBRE
 {
@@ -116,7 +117,7 @@ namespace CodingTaskBRE
             Other
         }
 
-        public static Product GetProduct(string[] inputs)
+        public static Product GetOrderedProduct(string[] inputs)
         {
             ProductTypes type;
             try
@@ -167,8 +168,13 @@ namespace CodingTaskBRE
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Book book = new Book("ipsum");
+            var enumList = Enum.GetNames(typeof(OrderSystem.ProductTypes)).ToList();
+            Console.WriteLine("Enter Product type ({0}) and name (if applicable) seperated by space", string.Join(", ", enumList));
+            var input = Console.ReadLine()?.Split(' ');
+            var output = OrderSystem.GetOrderedProduct(input);
+            Console.WriteLine("Name: {0}\nOperations: {1}", output.Name, string.Join(' ', output.Operations));
+            Console.ReadLine();
+
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace CodingTaskBRE
 {
 
-    public abstract class Product
+    public abstract class Product : IProduct
     {
         public string Name { get; set; }
         public abstract void GetSlip();
@@ -50,11 +50,116 @@ namespace CodingTaskBRE
         }
     }
 
+    public abstract class NonPhysicalProduct : Product
+    {
+        public override void GetSlip()
+        {
+            Operations.Add("Generated a packing slip.");
+            Console.WriteLine("Generated a packing slip.");
+        }
+        public virtual void DropMail()
+        {
+            Operations.Add("Mail Sent");
+            Console.WriteLine("Mail Sent");
+        }
+
+    }
+
+    class Video : NonPhysicalProduct
+    {
+        public Video(string videoName)
+        {
+            Name = videoName;
+
+            GetSlip();
+        }
+        public override void GetSlip()
+        {
+            base.GetSlip();
+            if (Name.ToLowerInvariant().Equals("learning to ski"))
+            {
+                Operations.Add("'First Aid' video added to the packing slip");
+                Console.WriteLine("'First Aid' video added to the packing slip");
+            }
+        }
+    }
+    class Membership : NonPhysicalProduct
+    {
+        public Membership()
+        {
+            base.GetSlip();
+            Operations.Add("Activate that membership");
+            Console.WriteLine("Activate that membership");
+            base.DropMail();
+        }
+    }
+    class Upgrade : NonPhysicalProduct
+    {
+        public Upgrade()
+        {
+            base.GetSlip();
+            Operations.Add("Apply the upgrade");
+            Console.WriteLine("Apply the upgrade");
+            base.DropMail();
+        }
+    }
+
+
     public class OrderSystem
     {
+        public enum ProductTypes
+        {
+            Video,
+            Membership,
+            Upgrade,
+            Book,
+            Other
+        }
+
         public static Product GetProduct(string[] inputs)
         {
-            return null;
+            ProductTypes type;
+            try
+            {
+                type = (ProductTypes)Enum.Parse(typeof(ProductTypes), inputs[0], ignoreCase: true);
+            }
+            catch
+            {
+                type = ProductTypes.Other;
+            }
+            Product product;
+            string name = inputs.Length > 1 ? string.Join(' ', inputs, 1, inputs.Length - 1) : string.Empty;
+            switch (type)
+            {
+                case ProductTypes.Membership:
+                    {
+                        product = new Membership();
+                        break;
+                    }
+                case ProductTypes.Upgrade:
+                    {
+                        product = new Upgrade();
+                        break;
+                    }
+                case ProductTypes.Video:
+                    {
+                        product = new Video(name);
+                        break;
+                    }
+                case ProductTypes.Book:
+                    {
+                        product = new Book(name);
+                        break;
+                    }
+                case ProductTypes.Other:
+                default:
+                    {
+                        product = new Other(name);
+                        break;
+                    }
+            }
+            return product;
+
         }
     }
 

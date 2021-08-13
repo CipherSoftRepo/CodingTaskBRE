@@ -1,0 +1,16 @@
+C:\Users\Aleksandar\source\repos\CodingTaskBRE\CodingTaskBRE\bin\Debug\net5.0\CodingTaskBRE.exe
+C:\Users\Aleksandar\source\repos\CodingTaskBRE\CodingTaskBRE\bin\Debug\net5.0\CodingTaskBRE.deps.json
+C:\Users\Aleksandar\source\repos\CodingTaskBRE\CodingTaskBRE\bin\Debug\net5.0\CodingTaskBRE.runtimeconfig.json
+C:\Users\Aleksandar\source\repos\CodingTaskBRE\CodingTaskBRE\bin\Debug\net5.0\CodingTaskBRE.runtimeconfig.dev.json
+C:\Users\Aleksandar\source\repos\CodingTaskBRE\CodingTaskBRE\bin\Debug\net5.0\CodingTaskBRE.dll
+C:\Users\Aleksandar\source\repos\CodingTaskBRE\CodingTaskBRE\bin\Debug\net5.0\ref\CodingTaskBRE.dll
+C:\Users\Aleksandar\source\repos\CodingTaskBRE\CodingTaskBRE\bin\Debug\net5.0\CodingTaskBRE.pdb
+C:\Users\Aleksandar\source\repos\CodingTaskBRE\CodingTaskBRE\obj\Debug\net5.0\CodingTaskBRE.csproj.AssemblyReference.cache
+C:\Users\Aleksandar\source\repos\CodingTaskBRE\CodingTaskBRE\obj\Debug\net5.0\CodingTaskBRE.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aleksandar\source\repos\CodingTaskBRE\CodingTaskBRE\obj\Debug\net5.0\CodingTaskBRE.AssemblyInfoInputs.cache
+C:\Users\Aleksandar\source\repos\CodingTaskBRE\CodingTaskBRE\obj\Debug\net5.0\CodingTaskBRE.AssemblyInfo.cs
+C:\Users\Aleksandar\source\repos\CodingTaskBRE\CodingTaskBRE\obj\Debug\net5.0\CodingTaskBRE.csproj.CoreCompileInputs.cache
+C:\Users\Aleksandar\source\repos\CodingTaskBRE\CodingTaskBRE\obj\Debug\net5.0\CodingTaskBRE.dll
+C:\Users\Aleksandar\source\repos\CodingTaskBRE\CodingTaskBRE\obj\Debug\net5.0\ref\CodingTaskBRE.dll
+C:\Users\Aleksandar\source\repos\CodingTaskBRE\CodingTaskBRE\obj\Debug\net5.0\CodingTaskBRE.pdb
+C:\Users\Aleksandar\source\repos\CodingTaskBRE\CodingTaskBRE\obj\Debug\net5.0\CodingTaskBRE.genruntimeconfig.cache
